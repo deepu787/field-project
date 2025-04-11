@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plants Nursery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .title a {
+            color: green;
+            font-size: 44px;
+        }
+
+        .title a:hover {
+            color: lightgreen;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 28px;
+            color: green;
+        }
+
+        nav ul li a:hover {
+            color: lightgreen;
+        }
+
+        section {
+            width: 100%;
+            display: flex;
+            margin-top: 120px;
+            align-items: flex-start;
+        }
+
+        .menu-bar {
+            background-color: lightgreen;
+            width: 300px;
+            height: 100%;
+            border: solid white;
+        }
+
+        .menu-bar h1 {
+            padding: 15px;
+            font-size: 25px;
+            color: green;
+            background: snow;
+            border-top: 2px solid green;
+            border-bottom: 2px solid green;
+        }
+
+        .menu-bar ul button {
+            background: lightgreen;
+            border: solid;
+        }
+
+        .menu-bar ul li {
+            width: 290px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu-bar ul li:hover {
+            background: honeydew;
+        }
+
+        #shop-content {
+            margin-left: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .products {
+            width: 45%;
+            border: solid lightgray;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .products:hover {
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        }
+
+        .products .img {
+            width: 100%;
+            height: 170px;
+            overflow: hidden;
+        }
+
+        .products .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .products .content {
+            flex: 2;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .products .content h3 {
+            color: green;
+        }
+
+        footer {
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        .bottom center {
+            padding: 12px;
+            font-size: 18px;
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="title">
+                <a href="Homepage.html">Plants Nursery</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="Shop1.html">Shop1</a></li>
+                    <li><a href="Handover.html">Handover</a></li>
+                    <li><a href="Products/add2cart.php"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="menu-bar">
+            <h1>Categories</h1>
+            <ul>
+                <a href="Indoor.html"><button><li>Indoor</li></button></a>
+                <a href="Medicinal.html"><button><li>Medicinal</li></button></a>
+                <a href="Fruits.html"><button><li>Fruits</li></button></a>
+                <a href="Flowers.html"><button><li>Flowers</li></button></a>
+                <a href="Bonsai.html"><button><li>Bonsai</li></button></a>
+                <a href="Cactus.html"><button><li>Cactus</li></button></a>
+                <a href="Religious.html"><button><li>Religious</li></button></a>
+            </ul>
+        </div>
+        <div id="shop-content">
+            <div class="products">
+                <div class="img">
+                    <img src="C:\Users\SaiTejaswi\Documents\product1.jpg" alt="Top 4 Die Hard Succulents Pack">
+                </div>
+                <div class="content">
+                    <h6><del>&#8377; 968</del></h6>
+                    <h3>&#8377; 699</h3>
+                    <h4>Top 4 Die Hard Succulents Pack</h4>
+                </div>
+            </div>
+            <div class="products">
+                <div class="img">
+                    <img src="C:\Users\SaiTejaswi\Documents\product2.jpg" alt="Set of 3 Outdoor Flowering Plants">
+                </div>
+                <div class="content">
+                    <h6><del>&#8377; 1,193</del></h6>
+                    <h3>&#8377; 799</h3>
+                    <h4>Set of 3 Outdoor Flowering Plants</h4>
+                </div>
+            </div>
+	<div class="products">
+                <div class="img">
+                <img src="C:\Users\SaiTejaswi\Documents\product3.jpg" alt="Top 4 Plants For Healthy Homes">
+                </div>
+                <div class="content">
+                    <h6><del>&#8377; 1,204</del></h6>
+		    <h3>&#8377; 849</h3>
+                    <h4>Top 4 Plants For Healthy Homes</h4>
+                </div>
+            </div>
+	<div class="products">
+                <div class="img">
+                <img src="C:\Users\SaiTejaswi\Documents\product4.jpg" alt="Best 4 plants to Kill Indoor Pollution">
+                </div>
+                <div class="content">
+                    <h6><del>&#8377; 1,356</del></h6>
+		    <h3>&#8377; 949</h3>
+                    <h4>Best 4 plants to Kill Indoor Pollution</h4>
+                </div>
+            </div>
+<div class="products">
+                <div class="img">
+                <img src="C:\Users\SaiTejaswi\Documents\product5.jpg" alt="Special 4 Plants Pack">
+                </div>
+                <div class="content">
+                    <h6><del>&#8377; 1,491</del></h6>
+		    <h3>&#8377; 999</h3>
+                    <h4>Special 4 Plants Pack</h4>
+                </div>
+            </div>
+	 <div class="products">
+                <div class="img">
+                <img src="C:\Users\SaiTejaswi\Documents\product6.jpg" alt="Special 4 Plants Pack">
+                </div>
+                <div class="content">
+                    <h6><del>&#8377; 1,514</del></h6>
+		    <h3>&#8377; 999</h3>
+                    <h4>Special 4 Plants Pack</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bottom">
+            <center>
+                <span class="credit">Created By Rithik Swargam</span>
+                <span class="fa fa-copyright"></span><span> 2021 All rights reserved.</span>
+            </center>
+        </div>
+    </footer>
+</body>
+</html>
+shop

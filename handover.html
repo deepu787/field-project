@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants Nursery</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .navbar .title a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Form Styling */
+        .Handover {
+            width: 60%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .Handover .text {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .input-data {
+            width: 48%;
+            margin-bottom: 10px;
+        }
+
+        .input-data label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .input-data input, .input-data select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-data {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .submit-btn .input-data {
+            text-align: center;
+        }
+
+        .submit-btn input {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn input:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="title">
+                <a href="Homepage.html">Plants Nursery</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="Shop1.html">Shop1</a></li>
+                    <li><a href="Handover.html">Handover</a></li>
+                    <li><a href="Products/add2cart.php"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <div class="Handover">
+        <div class="text">
+            Handover Form
+        </div>
+        <form action="handover.php" method="POST" onsubmit="return validateForm()">
+            <center><h2>Personal Details</h2></center>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" placeholder="First Name" id="fn" name="firstname" required>
+                </div>
+                <div class="input-data">
+                    <input type="text" placeholder="Last Name" id="ln" name="lastname" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="email" placeholder="Email Address" id="em" name="email" required>
+                </div>
+                <div class="input-data">
+                    <input type="text" placeholder="Mobile Number" id="mb" name="mobile" required>
+                </div>
+            </div>
+            <br>
+            <center><h2>Plant's Details</h2></center>
+            <br>
+            <div class="form-row">
+                <div class="input-data">
+                    <label>Plants Type:</label>
+                    <select id="type" name="type" required>
+                        <option value="Indoor">Indoor</option>
+                        <option value="Medicinal">Medicinal</option>
+                        <option value="Bonsai">Bonsai</option>
+                        <option value="Flowers">Flowers</option>
+                    </select>
+                </div>
+                <div class="input-data">
+                    <label>Plants Size:</label>
+                    <select id="size" name="size" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+            <center><h2>Address</h2></center>
+            <div class="form-row">
+                <div class="input-data">
+                    <label>State:</label>
+                    <select id="state" name="state" onchange="address()" required>
+                        <option disabled selected>Select A State</option>
+						<option value="Andhrapradesh">Andhrapradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Punjab">Punjab</option>
+                    </select>
+                </div>
+                <div class="input-data">
+                    <label>District:</label>
+                    <select id="district" name="district" required>
+                        <option disabled selected>First Select the State</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" name="add" placeholder="Address - City, Street, House No, Pincode." required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="radio-data">
+                    Whom To Handover?
+                </div>
+                <div class="radio-data">
+                    <input type="radio" id="Plants Nursery" name="handover" value="Handover to Us" required>
+                    <label>Handover to us</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="Sell" name="handover" value="Sell via website">
+                    <label>Sell via website</label>
+                </div>
+            </div>
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="BackToTop"><center><a href="Handover.html">BACK TO TOP</a></center></div>
+        <!-- Footer content here -->
+    </footer>
+
+    <script>
+        function address() {
+            var state = document.getElementById("state").value;
+            var districtSelect = document.getElementById("district");
+
+            // Clear the district select box
+            districtSelect.innerHTML = "<option disabled selected>Select a District</option>";
+
+            var districts = [];
+
+            if (state === "Maharashtra") {
+                districts = ["Mumbai", "Thane", "Pune", "Nagpur", "Nashik", "Solapur"];
+            } else if (state === "Delhi") {
+                districts = ["New Delhi", "North Delhi", "South Delhi", "East Delhi", "West Delhi"];
+            } else if (state === "Telangana") {
+                districts = ["Hyderabad", "Warangal", "Karimnagar", "Siddipet", "Nizamabad"];
+            } else if (state === "Gujarat") {
+                districts = ["Ahmedabad", "Gandhinagar", "Surat", "Rajkot", "Valsad"];
+            } else if (state === "Punjab") {
+                districts = ["Amritsar", "Bathinda", "Jalandhar", "Patiala"];
+            }
+
+            // Add the options to the district select box
+            districts.forEach(function(district) {
+                var option = document.createElement("option");
+                option.value = district;
+                option.textContent = district;
+                districtSelect.appendChild(option);
+            });
+        }
+    </script>
+</body>
+</html>
+handover
