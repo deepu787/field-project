@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plants Nursery</title>
+    <link rel="shortcut icon" href="logo3.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        .navbar { display: flex; align-items: center; padding: 20px; background: white; position: fixed; width: 100%; box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); }
+        .title a { font-size: 44px; color: green; text-decoration: none; }
+        .title a:hover { color: lightgreen; }
+        nav { flex: 1; text-align: right; }
+        nav ul { display: inline-block; list-style: none; }
+        nav ul li { display: inline-block; margin-right: 50px; }
+        nav ul li a { font-size: 28px; color: green; text-decoration: none; }
+        nav ul li a:hover { color: lightgreen; }
+        .imgslider img { width: 100%; height: 500px; border: solid 10px white; }
+        .icons-container, .Trending, .Categories, .selling, .Blogs { display: flex; flex-wrap: wrap; padding: 20px; }
+        .icons-container .icons, .Trending .products, .Categories .card, .selling .products, .Blogs .blog { flex: 1; margin: 10px; padding: 10px; border: solid lightgray; text-align: center; }
+        .icons-container .icons img, .Trending .products img, .Categories .card img, .selling .products img, .Blogs .blog img { width: 100%; height: auto; }
+        .icons-container .icons h3, .Trending .products h3, .Categories .card a, .selling .products h3, .Blogs .blog h5 a { color: green; }
+        .Trending .products:hover, .selling .products:hover, .Categories .card:hover, .Blogs .blog:hover { box-shadow: 0 .5rem 1rem rgba(0,0,0,.2); }
+        .video { text-align: center; margin-top: 30px; }
+        .video iframe { width: 100%; height: 80%; padding: 20px; }
+        footer { background: lightgreen; padding: 20px; text-align: center; }
+        .BackToTop { background: green; padding: 15px; }
+        .BackToTop a { color: white; text-decoration: none; }
+        .BackToTop a:hover { color: lightgreen; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="title"><a href="Homepage.html">Plants Nursery</a></div>
+            <nav>
+                <ul>
+					
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="Shop1.html">Shop1</a></li>
+                    <li><a href="Handover.html">Handover</a></li>
+                    <li><a href="Products/add2cart.php"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br><br>
+    <div class="imgslider">
+        <img src="C:\Users\SaiTejaswi\Documents\I2.jpg">
+    </div>
+    <br>
+    <div class="icons-container">
+        <div class="icons"><img src="C:\Users\SaiTejaswi\Desktop\icon-1.png"><h3>Free Delivery</h3><span>On All Orders</span></div>
+        <div class="icons"><img src="C:\Users\SaiTejaswi\Documents\icon-2.png"><h3>Reasonable Prices</h3><span>On All Plants</span></div>
+        <div class="icons"><img src="C:\Users\SaiTejaswi\Documents\icon-3.png"><h3>Discount & Offers</h3><span>On All Orders</span></div>
+        <div class="icons"><img src="C:\Users\SaiTejaswi\Documents\icon-4.png"><h3>Secure Payment</h3><span>Different Methods</span></div>
+    </div>
+    <div class="Trending-title"><b>Trending</b></div>
+    <div class="Trending">
+        <div class="products"><img src="C:\Users\SaiTejaswi\Documents\product1.jpg"><h3>&#8377; 699</h3><h4><a href="Products/product1.php">Top 4 Die Hard Succulents Pack</a></h4></div>
+    </div>
+    <div class="cat-title"><b>Categories</b></div>
+    <div class="Categories">
+        <div class="card"><a href="Indoor.html"><img src="C:\Users\SaiTejaswi\Documents\Indoor.jpg"></a><a href="Indoor.html">Indoor</a></div>
+    </div>
+    <div class="selling-title"><b>Best Selling Products</b></div>
+    <div class="selling">
+        <div class="products"><img src="C:\Users\SaiTejaswi\Documents\product6.jpg"><h3>&#8377; 999</h3><h4><a href="Products/product6.php">Special 4 Plants Pack</a></h4></div>
+    </div>
+    <div class="blog-title"><b>Blogs</b></div>
+    <div class="Blogs">
+        <div class="blog"><a href="blog1.html"><img src="C:\Users\SaiTejaswi\Documents\blog1.jfif"></a><h5><a href="blog1.html">Why we should be Thankful for Trees?</a></h5></div>
+    </div>
+    <footer>
+        <div class="BackToTop"><a href="Homepage.html">BACK TO TOP</a></div>
+        <p>Created By Rithik Swargam &copy; 2021 All rights reserved.</p>
+    </footer>
+</body>
+</html>
